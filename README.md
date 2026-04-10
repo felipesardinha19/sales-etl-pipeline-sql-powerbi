@@ -1,4 +1,4 @@
-# 🛒 ecommerce-etl-pipeline
+# 🛒 etl-pipeline
 
 Pipeline ETL desenvolvido em Python para extração, transformação e carga de dados de vendas de e-commerce em um banco de dados SQL Server.
 
