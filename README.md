@@ -1,12 +1,12 @@
 # 🛒 Pipeline ETL End-to-End com Dashboard
 
-Primeira versão de uma Pipeline ETL desenvolvido em Python para extração, transformação e carga de dados de vendas de e-commerce em um banco de dados SQL Server.
+Pipeline ETL desenvolvido em Python para extração, transformação e carga de dados de vendas de e-commerce em um banco de dados SQL Server e com um Dashboard e Insights no Power BI.
 
 ---
 
 ## 📋 Descrição
 
-Script que realiza o processo completo de ETL a partir de um dataset fictício de vendas em formato CSV, aplicando tratamentos e padronizações nos dados antes de carregá-los em um banco relacional.
+Script que realiza o processo completo de ETL a partir de um dataset fictício de vendas em formato CSV, aplicando tratamentos e padronizações nos dados antes de carregá-los em um banco relacional e posteriormente gerar insights com dashboard no Power BI.
 
 ---
 
