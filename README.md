@@ -52,55 +52,69 @@ Faturamento por mês
 Faturamento por loja
 Faturamento por produto
 
+![Dashboard Power BI](docs/image/Captura%20de%20tela%202026-04-24%20153437.png)
+
 ### 📈 Insights gerados
-A análise temporal permite identificar sazonalidade nas vendas
-Algumas lojas concentram maior parte do faturamento
-Pequeno conjunto de produtos representa grande parte das vendas
+ - A loja de Salvador apresentou o maior volume de vendas, enquanto a loja Online teve o menor desempenho no período analisado
+ - O produto mais vendido foi o iPhone 14, enquanto o cabo HDMI apresentou menor demanda
+ - O faturamento total do período foi de aproximadamente R$ 299,4 mi
+ - Foram registrados cerca de 100 mil pedidos, com ticket médio de aproximadamente R$ 2,99 mil
+ - Outubro foi o mês com maior volume de vendas, enquanto fevereiro apresentou o menor desempenho
 
 ---
 
 ## 🗂️ Estrutura do projeto
 
 ```
-ecommerce-etl-pipeline/
+Data_Pipeline_Vendas/
 │
 ├── data/
-│   └── vendas_tech.csv       # Dataset fictício de vendas
+│   └── raw/
+│       └── vendas_tech.csv
 │
-├── script/
-│   └── etl.py                # Script principal do pipeline
+├── docs/
+│   └── image/
+│       └── dashboard_powerbi.png
 │
-├── .env.example              # Exemplo de configuração das variáveis de ambiente
+├── logs/
+│   └── pipeline.log
+│
+├── src/
+│   ├── utils/
+│   │   └── logger.py
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── pipeline.py
+│
+├── .env
+├── .env.example
 ├── .gitignore
 └── README.md
 ```
-
 ---
 
 ## ⚙️ Como executar
 
-### 1. Clone o repositório
-```bash
-git clone https://github.com/felipesardinha19/ecommerce-etl-pipeline.git
-cd ecommerce-etl-pipeline
-```
+# 1. Clonar o repositório
+´´´
+git clone <https://github.com/felipesardinha19/python-etl-sqlserver>
+´´´
 
-### 2. Instale as dependências
-```bash
+# 2. Instalar dependências
+´´´
 pip install pandas sqlalchemy pyodbc python-dotenv
-```
+´´´
 
-### 3. Configure as variáveis de ambiente
-Crie um arquivo `.env` na raiz do projeto com base no `.env.example`:
-```
-DB_CONNECTION_STRING=mssql+pyodbc://@SEU_SERVIDOR/SEU_BANCO?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes
-```
+# 3. Configurar variáveis de ambiente
+´´´
+cp .env.example .env
+´´´
 
-### 4. Execute o script
-```bash
-cd script
-python etl.py
-```
+# 4. Executar pipeline
+´´´
+python -m src.pipeline
+´´´
 
 ---
 
@@ -110,4 +124,5 @@ python etl.py
 - Pandas
 - SQLAlchemy
 - SQL Server Express
+- Power BI
 - python-dotenv
